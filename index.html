@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I Will Dance The OAuth Dance For You</title>
+
+<link rel="icon" 
+      type="image/png" 
+      href="danceremoji.png" />
+
+      <style type="text/css">
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 100%;
+
+}
+
+div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* To make sure that all label have the same size and are properly align */
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+}
+
+input, textarea {
+  /* To make sure that all text field have the same font settings
+     By default, textarea are set with a monospace font */
+  font: 1em sans-serif;
+
+  /* To give the same size to all text field */
+  width: 300px;
+
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* To give a little highligh on active elements */
+  border-color: #000;
+}
+
+textarea {
+  /* To properly align multiline text field with their label */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5em;
+
+  /* To allow users to resize any textarea vertically
+     It works only on Chrome, Firefox and Safari */
+  resize: vertical;
+}
+
+.button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 200px; /* same size as the label elements */
+}
+
+button {
+  /* This extra magin represent the same space as the space between
+     the labels and their text fields */
+  margin-left: .5em;
+}
+        </style>
+</head>
+<body>
+
+
+<h1><center>Let's do the Twitter OAuth dance!</center></h1>
+<h2><i>Warning</i>: don't use this site if you care about the integrity of your API keys. It's served over an insecure connection, and processes your keys server-side. While I don't log any of your keys and have no interest in them, if this server is compromised then your keys could be, too.</h2>
+<p>This site is intended for authorizing single accounts to post using apps registered to other accounts, such as when developing Twitter bots. If you have more industrial purposes in mind, then you should probably set up your own OAuth flow. This source for this site is available on github, and leans heavily on <a href="https://twitteroauth.com">TwitterOAuth for PHP.</a></p>
+
+<p>Okay, let's go dancing! First, go to the <a href="https://apps.twitter.com/">Twitter dev center</a> and set up your app. You'll need to have put something in the "Callback URL" field for this generator to work - anything should do, but you might want to use "<tt>http://v21.io/iwilldancetheoauthdanceforyou/callback.php</tt>". Find your Consumer key and Consumer secret and paste them below:</p>
+
+<br><br>
+<form action="stage1.php" method="post">
+    <div>
+        <label for="CONSUMER_KEY">Consumer key</label>
+        <input type="text" id="CONSUMER_KEY" name="CONSUMER_KEY" />
+    </div>
+    <div>
+        <label for="CONSUMER_SECRET">Consumer secret</label>
+        <input type="text" id="CONSUMER_SECRET" name="CONSUMER_SECRET" />
+    </div>
+    <br>
+    <div class="button">
+        <button type="submit">Now let's go get some access tokens!</button>
+    </div>
+</form>
+
+
+</body>
+</html>

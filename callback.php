@@ -37,6 +37,10 @@ $access_token = $connection->oauth("oauth/access_token", array("oauth_verifier" 
       	padding-left: 1em;
       	font-family: monospace;
       }
+      .indent,pre
+      {
+      	padding-left: 1em;
+      }
         </style>
 </head>
 <body>
@@ -45,12 +49,13 @@ $access_token = $connection->oauth("oauth/access_token", array("oauth_verifier" 
 <h1><center>Dancing complete!</center></h1>
 
 <p>Here are the magic strings allowing you to authenticate as <a href="http://twitter.com/<?php echo($access_token["screen_name"]) ?>"><?php echo($access_token["screen_name"]) ?></a></p>
-<?php
+<div class="indent"><?php
 echo("Consumer key: <span class=\"key\">" . $_SESSION['CONSUMER_KEY'] . "</span><br>");
 echo("Consumer secret: <span class=\"key\">" . $_SESSION['CONSUMER_SECRET'] . "</span><br>");
 echo("Access key: <span class=\"key\">" . $access_token["oauth_token"] . "</span><br>");
 echo("Access secret: <span class=\"key\">" . $access_token["oauth_token_secret"] . "</span><br>");
 ?>
+</div>
 <br><p> And here they are in a JSON array </p>
 <pre>
 
@@ -63,7 +68,7 @@ echo("Access secret: <span class=\"key\">" . $access_token["oauth_token_secret"]
 </pre>
 
 <br>
-<p>Thank you for joining us on this magical journey through Twitter app authentication</p>
+<p>Thank you for joining us on this magical journey through Twitter app authentication.</p>
 
 </body>
 </html>

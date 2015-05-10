@@ -79,16 +79,16 @@ button {
 <h2><i>Warning</i>: don't use this site if you care about the integrity of your API keys. It's served over an insecure connection, and processes your keys server-side. While I don't log any of your keys and have no interest in them, if this server is compromised then your keys could be, too.</h2>
 <p>This site is intended for authorizing single accounts to post using apps registered to other accounts, such as when developing Twitter bots. If you have more industrial purposes in mind, then you should probably set up your own OAuth flow. This source for this site is available on <a href="https://github.com/v21/iwilldancetheoauthdanceforyou">github</a>, and leans heavily on <a href="https://twitteroauth.com">TwitterOAuth for PHP.</a></p>
 
-<p>Okay, let's go dancing! First, log into Twitter with an account with a registered phone number. Now, go to the <a href="https://apps.twitter.com/">Twitter dev center</a> and set up your app. You'll need to have put something in the "Callback URL" field for this generator to work - anything should do, but you might want to use "<tt>http://v21.io/iwilldancetheoauthdanceforyou/callback.php</tt>". Find your Consumer key and Consumer secret and paste them below. Now, before you generate your access tokens, log out of Twitter, and log in with the account you want to grant the app access to.</p>
+<p>Okay, let's go dancing! First, log into Twitter with an account with a registered phone number. Now, go to the <a href="https://apps.twitter.com/">Twitter dev center</a> and set up your app. You'll need to have put something in the "Callback URL" field for this generator to work - anything should do, but you might want to use "<tt>http://v21.io/iwilldancetheoauthdanceforyou/callback.php</tt>". Find your Consumer Key and Consumer Secret and paste them below. Now, before you generate your access tokens, log out of Twitter, and log in with the account you want to grant the app access to.</p>
 
 <br><br>
 <form action="stage1.php" method="post">
     <div>
-        <label for="CONSUMER_KEY">Consumer key</label>
+        <label for="CONSUMER_KEY">Consumer Key</label>
         <input type="text" id="CONSUMER_KEY" name="CONSUMER_KEY" />
     </div>
     <div>
-        <label for="CONSUMER_SECRET">Consumer secret</label>
+        <label for="CONSUMER_SECRET">Consumer Secret</label>
         <input type="text" id="CONSUMER_SECRET" name="CONSUMER_SECRET" />
     </div>
     <br>
